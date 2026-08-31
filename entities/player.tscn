@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bbqa8fj0chaa"]
+
+[ext_resource type="Texture2D" uid="uid://djw6wpqvll5kg" path="res://sprites/Sprite Pack 6/1 - Penguin/Idle (16 x 16).png" id="1_merdl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
+atlas = ExtResource("1_merdl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
+atlas = ExtResource("1_merdl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfe5m"]
+atlas = ExtResource("1_merdl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
+atlas = ExtResource("1_merdl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsoyl"]
+atlas = ExtResource("1_merdl")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nm46"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0kkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4p34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfe5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qly61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsoyl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=247745472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348475167]
+shape = SubResource("CapsuleShape2D_u3f3p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=591556778]
+sprite_frames = SubResource("SpriteFrames_6nm46")
+animation = &"idle"
+autoplay = "idle"
