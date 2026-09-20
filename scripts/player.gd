@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 50.0
 const JUMP_VELOCITY = -300.0
 
+@onready var penguim: AnimatedSprite2D = $AnimatedSprite2D
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -21,5 +23,17 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if is_on_floor():	
+		if direction > 0:
+			penguim.flip_h = false
+			penguim.play('walk')
+		elif direction < 0:
+			penguim.flip_h = true
+			penguim.play('walk')
+		else:
+			penguim.play('idle')
+	else:
+		penguim.play('jump')
 
 	move_and_slide()

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bbqa8fj0chaa"]
 
 [ext_resource type="Texture2D" uid="uid://djw6wpqvll5kg" path="res://sprites/Sprite Pack 6/1 - Penguin/Idle (16 x 16).png" id="1_merdl"]
+[ext_resource type="Texture2D" uid="uid://dvfcxuw6v7w6p" path="res://sprites/Sprite Pack 6/1 - Penguin/Jump (16 x 16).png" id="2_e4p34"]
+[ext_resource type="Texture2D" uid="uid://oldawgr0ixxk" path="res://sprites/Sprite Pack 6/1 - Penguin/Waddling (16 x 16).png" id="3_rfe5m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
 radius = 5.0
@@ -26,6 +28,34 @@ region = Rect2(48, 0, 16, 16)
 atlas = ExtResource("1_merdl")
 region = Rect2(64, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nm46"]
+atlas = ExtResource("2_e4p34")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i623q"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef06p"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjdhl"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dchgp"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
+atlas = ExtResource("3_rfe5m")
+region = Rect2(80, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6nm46"]
 animations = [{
 "frames": [{
@@ -44,8 +74,39 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qsoyl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nm46")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i623q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef06p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjdhl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x08pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dchgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdgjc")
+}],
+"loop": 1,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -56,5 +117,6 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=591556778]
 sprite_frames = SubResource("SpriteFrames_6nm46")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.3665363
