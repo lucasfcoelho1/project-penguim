@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 50.0
+const SPEED = 80.0
 const JUMP_VELOCITY = -300.0
 
 @onready var penguim: AnimatedSprite2D = $AnimatedSprite2D
