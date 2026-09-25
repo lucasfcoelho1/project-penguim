@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://dq4txsenegmw6" path="res://scripts/player.gd" id="2_dbls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kiuu"]
-size = Vector2(165, 20)
+size = Vector2(34.25, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbls1"]
+size = Vector2(84.125, 10)
 
 [node name="Game" type="Node2D" unique_id=2044044836]
 
@@ -12,15 +15,55 @@ size = Vector2(165, 20)
 position = Vector2(37, 91)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1552473976]
-position = Vector2(12, 111)
+position = Vector2(-21, 104)
 shape = SubResource("RectangleShape2D_5kiuu")
 debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1952478760]
-position = Vector2(201, 107)
+position = Vector2(25, 85)
 shape = SubResource("RectangleShape2D_5kiuu")
 debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=247075510]
+position = Vector2(158, 43)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=318985436]
+position = Vector2(200, 17)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1428809469]
+position = Vector2(222, 6)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1808075026]
+position = Vector2(264, -2)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=2083218722]
+position = Vector2(321, -18)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1353431876]
+position = Vector2(343, -29)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=104805053]
+position = Vector2(385, -37)
+shape = SubResource("RectangleShape2D_5kiuu")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1192047020]
+position = Vector2(91, 65)
+shape = SubResource("RectangleShape2D_dbls1")
+debug_color = Color(0.07043215, 0.64752597, 0.15741509, 0.41960785)
+
 [node name="Player" parent="." unique_id=247745472 instance=ExtResource("1_5kiuu")]
-position = Vector2(7, 153)
+position = Vector2(7, 147)
 script = ExtResource("2_dbls1")

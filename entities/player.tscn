@@ -113,6 +113,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D" unique_id=247745472]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348475167]
+visible = false
 shape = SubResource("CapsuleShape2D_u3f3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=591556778]
@@ -120,3 +121,10 @@ sprite_frames = SubResource("SpriteFrames_6nm46")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.514868
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2126558955]
+limit_left = 0
+limit_top = 0
+limit_right = 300
+limit_bottom = 200
+limit_smoothed = true
